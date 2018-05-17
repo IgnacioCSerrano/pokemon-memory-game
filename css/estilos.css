@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6589f9;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+/* Clases  index.html */
+
+.renacimiento {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.logo {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 80%;
+    z-index: 10;
+    transition: all 1500ms ease-in-out;
+}
+
+.over {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 50%;
+    z-index: 10;
+}
+
+.reloj {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.boton {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton button {
+    padding: 10px;
+    background: white;
+}
+
+.boton span {
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+/* Clases main.js */
+
+.rejilla { 
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta { 
+    margin: 15px;
+    height: 130px;
+    width: 130px;
+    transform-style: preserve-3d;
+    transition: all 400ms linear;
+    position: relative;
+}
+
+.anverso {
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    background-image: url("../img/pokeball.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+
+.reverso {
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* backface-visibility: hidden; */
+    transform: rotateY(180deg);
+}
+
+.seleccionado { 
+    transform: rotateY(180deg); 
+}
+
+.eliminado .anverso {
+    background-image: none !important;
+}
+
+.oculto {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 500ms, opacity 1000ms ease-in-out;
+}
+
+.open {
+    top: 50%;
+}
+
+.pop {
+    visibility: initial;
+    opacity: 1;
+    transition: visibility 1500ms, opacity 1500ms ease-in-out;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokémon Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <div class="boton">
+        <p><button id="comienzo" onclick="start()"><span>Comenzar</span></button></p>
+        <p><button id="reinicio" class="renacimiento" onclick="reset()"><span>Volver a jugar</span></button></p>
+    </div>
+    <div class="reloj">
+        <p id="reloj">02:00</p>
+    </div>
+    <div id="game" class="oculto"></div>
+    <img src="./img/logo.png" class="logo" id="ganador">
+    <img src="./img/game-over.png" class="over" id="perdedor">
+    
+    <audio src="./audio/battle.mp3" id="battle"></audio> 
+    <audio src="./audio/victory.mp3" id="victory"></audio>
+    <audio src="./audio/defeat.mp3" id="defeat"></audio>
+    <audio src="./audio/bounce.mp3" id="bounce"></audio>
+    <audio src="./audio/fail.mp3" id="fail"></audio>
+    <audio src="./audio/clic.mp3" id="click"></audio>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
